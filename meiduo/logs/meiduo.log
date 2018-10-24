@@ -1,0 +1,83 @@
+ERROR 2018-10-23 16:00:14,542 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2018-10-23 16:00:14,614 basehttp 124 "GET / HTTP/1.1" 400 61851
+ERROR 2018-10-23 16:00:14,888 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2018-10-23 16:00:14,922 basehttp 124 "GET /favicon.ico HTTP/1.1" 400 61935
+INFO 2018-10-23 16:01:22,974 basehttp 124 "GET / HTTP/1.1" 200 1714
+WARNING 2018-10-23 16:01:23,029 base 152 Not Found: /favicon.ico
+WARNING 2018-10-23 16:01:23,030 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 1968
+WARNING 2018-10-24 16:21:17,308 base 152 Not Found: /usernames/jianhao/count/
+WARNING 2018-10-24 16:21:17,309 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 404 2007
+WARNING 2018-10-24 16:52:18,772 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 16:52:18,773 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2013
+WARNING 2018-10-24 16:52:18,863 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 16:52:18,867 base 152 Not Found: /sms_code/13590299759/
+WARNING 2018-10-24 16:52:18,867 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2013
+WARNING 2018-10-24 16:52:18,868 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 404 1998
+WARNING 2018-10-24 16:53:42,531 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 16:53:42,534 base 152 Not Found: /sms_code/13590299759/
+WARNING 2018-10-24 16:53:42,534 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2013
+WARNING 2018-10-24 16:53:42,535 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 404 1998
+WARNING 2018-10-24 16:54:54,420 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 16:54:54,421 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2013
+WARNING 2018-10-24 16:54:54,425 base 152 Not Found: /sms_code/13590299759/
+WARNING 2018-10-24 16:54:54,425 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 404 1998
+WARNING 2018-10-24 16:55:16,166 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 16:55:16,167 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2013
+WARNING 2018-10-24 16:55:31,706 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 16:55:31,710 base 152 Not Found: /sms_code/13590299759/
+WARNING 2018-10-24 16:55:31,710 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 404 1998
+WARNING 2018-10-24 16:55:31,711 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2013
+WARNING 2018-10-24 16:59:57,241 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 16:59:57,243 base 152 Not Found: /sms_code/13590299759/
+WARNING 2018-10-24 16:59:57,244 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2115
+WARNING 2018-10-24 16:59:57,244 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 404 2100
+WARNING 2018-10-24 17:03:19,943 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:03:19,944 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+ERROR 2018-10-24 17:03:19,951 exception 135 Internal Server Error: /sms_code/13590299759/
+Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/verifications/views.py", line 35, in get
+    redis_pipeline.setex('sms_code_' + mobile, constants.SMS_CODE_EXPIRES)
+TypeError: setex() missing 1 required positional argument: 'value'
+ERROR 2018-10-24 17:03:19,999 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 500 16510
+WARNING 2018-10-24 17:04:56,428 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:04:56,430 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+INFO 2018-10-24 17:04:56,477 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+WARNING 2018-10-24 17:06:52,129 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:06:52,131 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+INFO 2018-10-24 17:06:52,173 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+WARNING 2018-10-24 17:16:34,269 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:16:34,278 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+INFO 2018-10-24 17:16:34,398 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+WARNING 2018-10-24 17:19:33,487 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:19:33,497 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+INFO 2018-10-24 17:19:33,618 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+WARNING 2018-10-24 17:34:53,472 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:34:53,474 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+INFO 2018-10-24 17:34:53,517 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+WARNING 2018-10-24 17:34:54,406 tasks 30 发送验证码短信[失败][ mobile: 13590299759 ]
+WARNING 2018-10-24 17:36:55,744 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:36:55,746 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+INFO 2018-10-24 17:36:55,787 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+WARNING 2018-10-24 17:36:55,875 tasks 30 发送验证码短信[失败][ mobile: 13590299759 ]
+WARNING 2018-10-24 17:54:59,819 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:54:59,820 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+WARNING 2018-10-24 17:54:59,908 base 152 Not Found: /mobiles/13590299759/count/
+WARNING 2018-10-24 17:54:59,909 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
+INFO 2018-10-24 17:54:59,950 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+INFO 2018-10-24 17:55:00,323 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
