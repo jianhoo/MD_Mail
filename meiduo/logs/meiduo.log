@@ -141,3 +141,41 @@ INFO 2018-10-25 16:58:07,041 tasks 29 发送验证码短信[正常][ mobile: 135
 INFO 2018-10-25 16:58:17,058 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
 INFO 2018-10-25 16:58:17,058 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
 INFO 2018-10-25 16:58:17,173 basehttp 124 "POST /users/ HTTP/1.1" 201 52
+INFO 2018-10-25 18:08:54,462 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-25 18:08:54,526 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-25 18:30:01,190 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+ERROR 2018-10-25 18:30:01,219 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework_jwt/views.py", line 57, in post
+    if serializer.is_valid():
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework_jwt/serializers.py", line 50, in validate
+    user = authenticate(**credentials)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 70, in authenticate
+    user = _authenticate_with_backend(backend, backend_path, request, credentials)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 116, in _authenticate_with_backend
+    return backend.authenticate(*args, **credentials)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/users/utils.py", line 44, in authenticate
+    if user is not None and user.check_password():
+TypeError: check_password() missing 1 required positional argument: 'raw_password'
+ERROR 2018-10-25 18:30:01,267 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 18006
+INFO 2018-10-25 18:30:26,989 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209

@@ -219,7 +219,12 @@ REST_FRAMEWORK = {
 # JWT认证时间保存
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
 }
+
+AUTHENTICATION_BACKENDS = [
+    'users.utils.UsernameMobileAuthBackend',
+]
 
 # 认证用户模型更改为以下 目录名 + 模型类
 AUTH_USER_MODEL = 'users.User'
