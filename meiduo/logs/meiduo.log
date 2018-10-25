@@ -81,3 +81,63 @@ WARNING 2018-10-24 17:54:59,908 base 152 Not Found: /mobiles/13590299759/count/
 WARNING 2018-10-24 17:54:59,909 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 404 2202
 INFO 2018-10-24 17:54:59,950 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
 INFO 2018-10-24 17:55:00,323 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-25 16:10:20,145 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+INFO 2018-10-25 16:10:33,407 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+INFO 2018-10-25 16:15:18,354 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:54:23,405 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+INFO 2018-10-25 16:54:37,538 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:54:39,424 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:54:39,476 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+INFO 2018-10-25 16:54:40,581 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-25 16:54:55,702 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2018-10-25 16:54:55,711 base 152 Not Found: /users/
+WARNING 2018-10-25 16:54:55,713 basehttp 124 "POST /users/ HTTP/1.1" 404 2531
+INFO 2018-10-25 16:54:55,718 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+INFO 2018-10-25 16:54:55,719 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+WARNING 2018-10-25 16:55:05,305 base 152 Not Found: /users/
+WARNING 2018-10-25 16:55:05,308 basehttp 124 "POST /users/ HTTP/1.1" 404 2531
+INFO 2018-10-25 16:55:05,318 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:55:05,318 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+WARNING 2018-10-25 16:55:27,693 base 152 Not Found: /users/
+WARNING 2018-10-25 16:55:27,697 basehttp 124 "POST /users/ HTTP/1.1" 404 2531
+INFO 2018-10-25 16:55:27,703 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+INFO 2018-10-25 16:55:27,708 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:56:45,164 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+INFO 2018-10-25 16:56:45,165 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+ERROR 2018-10-25 16:56:45,169 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 438, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+ERROR 2018-10-25 16:56:45,221 basehttp 124 "POST /users/ HTTP/1.1" 500 17033
+INFO 2018-10-25 16:58:00,150 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:58:00,152 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+WARNING 2018-10-25 16:58:00,156 basehttp 124 "POST /users/ HTTP/1.1" 400 43
+INFO 2018-10-25 16:58:06,357 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:58:06,388 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+INFO 2018-10-25 16:58:07,041 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-25 16:58:17,058 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-10-25 16:58:17,058 basehttp 124 "GET /usernames/jianhao/count/ HTTP/1.1" 200 32
+INFO 2018-10-25 16:58:17,173 basehttp 124 "POST /users/ HTTP/1.1" 201 52
