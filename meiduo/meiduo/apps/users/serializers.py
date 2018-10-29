@@ -4,7 +4,10 @@ from django_redis import get_redis_connection
 from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
+from users import constants
 from users.models import User
+from celery_tasks.email.tasks import send_verify_email
+from utils import tjws
 
 
 class CreateUserSerializer(serializers.Serializer):
@@ -89,6 +92,53 @@ class UserDetailSerializer(serializers.ModelSerializer):
     """
     用户详细信息序列化器
     """
+
     class Meta:
         model = User
         fields = ('id', 'username', 'mobile', 'email', 'email_active')
+
+
+class EmailSerializer(serializers.ModelSerializer):
+    """
+    邮箱序列化器
+    """
+
+    class Meta:
+        model = User
+        fields = ('id', 'email')
+        extra_kwargs = {
+            'email': {
+                'required': True
+            }
+        }
+
+    def update(self, instance, validated_data):
+        instance.email = validated_data['email']
+        instance.save()
+
+        verify_url = instance.generate_verify_email_url()
+        send_verify_email.delay(instance.email, verify_url)
+
+        return instance
+
+
+class EmailVerifySerializer(serializers.Serializer):
+    # 接收激活参数
+    token = serializers.CharField(max_length=200)
+
+    # 验证激活参数是否有效
+    def validate_token(self, value):
+        # 用validate_data形式校验,获取到的value是一个字符串,不是字典!,当return返回一个字符串
+        # 后,重新放进字典中,传给create方法和update方法,所有下面的create方法中是用过字典获取键
+        # token的值
+        data_dict = tjws.loads(value, constants.VERIFY_EMAIL_TOKEN_EXPIRES)
+        if data_dict is None:
+            raise serializers.ValidationError('链接信息无效')
+
+        return data_dict.get('user_id')
+
+    def create(self, validated_data):
+        user = User.objects.get(pk=validated_data.get('token'))
+        user.email_active = True
+        user.save()
+        return user

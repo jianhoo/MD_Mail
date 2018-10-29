@@ -1,15 +1,18 @@
 from django.shortcuts import render
 
 # Create your views here.
-from rest_framework import generics
+from itsdangerous import BadData
+from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from users import serializers
 from users.models import User
 
 # url(r'^usernames/(?P<username>\w{5,20})/count/$', views.UsernameCountView.as_view())
-from users.serializers import CreateUserSerializer, UserDetailSerializer
+from users.serializers import CreateUserSerializer, UserDetailSerializer, EmailSerializer, EmailVerifySerializer
+from utils import tjws
 
 
 class UsernameCountView(APIView):
@@ -66,5 +69,31 @@ class UserDetailView(generics.RetrieveAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+class EmailView(generics.UpdateAPIView):
+    """
+    保存用户邮箱
+    """
+    permission_classes = [IsAuthenticated]
+    serializer_class = EmailSerializer
+
+    def get_object(self, *args, **kwargs):
+        return self.request.user
+
+
+class VerifyEmailView(APIView):
+
+    """
+    邮箱验证
+    """
+
+    def get(self, request):
+        serializer = serializers.EmailVerifySerializer(data=request.query_params)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'message': 'OK'})
+        return Response({'message': serializer.errors})
+
 
 
