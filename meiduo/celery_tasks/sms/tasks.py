@@ -19,8 +19,8 @@ def send_sms_code(mobile, code, expires, template_id):
 
     try:
         ccp = CCP()
-        result = ccp.send_template_sms(mobile, {code, expires}, template_id)
-        ccp.send_template_sms('18516952650', ['1234', 5], 1)
+        # result = ccp.send_template_sms(mobile, {code, expires}, template_id)
+        result = 0
         print(code)
     except Exception as e:
         logger.error("发送验证码短信[异常][ mobile: %s, message: %s ]" % (mobile, e))

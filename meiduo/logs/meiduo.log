@@ -179,3 +179,589 @@ Traceback (most recent call last):
 TypeError: check_password() missing 1 required positional argument: 'raw_password'
 ERROR 2018-10-25 18:30:01,267 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 18006
 INFO 2018-10-25 18:30:26,989 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-26 14:25:57,469 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-26 14:25:57,584 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-26 14:28:22,799 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-26 14:36:54,627 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-26 14:37:14,341 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-26 20:45:37,625 basehttp 124 "GET /usernames/123456/count/ HTTP/1.1" 200 31
+INFO 2018-10-26 20:45:40,662 basehttp 124 "GET /usernames/1234567/count/ HTTP/1.1" 200 32
+INFO 2018-10-26 20:45:43,347 basehttp 124 "GET /usernames/12345678/count/ HTTP/1.1" 200 33
+INFO 2018-10-26 20:45:53,311 basehttp 124 "GET /usernames/123456789/count/ HTTP/1.1" 200 34
+INFO 2018-10-26 20:45:54,959 basehttp 124 "GET /usernames/1234567890/count/ HTTP/1.1" 200 35
+WARNING 2018-10-26 21:16:51,373 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-10-26 21:16:51,374 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 2909
+WARNING 2018-10-26 21:16:52,739 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-10-26 21:16:52,739 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 2909
+WARNING 2018-10-26 21:16:52,959 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-10-26 21:16:52,959 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 2909
+WARNING 2018-10-26 21:16:53,132 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-10-26 21:16:53,133 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 2909
+WARNING 2018-10-26 21:16:53,308 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-10-26 21:16:53,309 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 2909
+WARNING 2018-10-26 21:17:19,903 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-10-26 21:17:19,904 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 2909
+INFO 2018-10-26 21:19:45,078 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 141
+INFO 2018-10-26 21:21:14,197 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+WARNING 2018-10-26 21:21:37,648 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-10-26 21:21:37,649 basehttp 124 "GET /oauth/qq/user/?code=257A3C1B01DC4D25BC33EE34C4AF586D HTTP/1.1" 404 3085
+INFO 2018-10-26 21:22:34,499 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-26 21:22:55,606 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/views.py", line 55, in get
+    qq_user = OAuthQQUser.objects.get(openid=openid)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/views.py", line 58, in get
+    token = oauth.generate_save_user_token(openid)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/utils.py", line 90, in generate_save_user_token
+    serializer = Serializer(dev.SECRET_KEY, expires_in = constants.SAVE_QQ_USER_TOKEN_EXPIRES)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 118, in __init__
+    super(BaseSerializer, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'expires_in'
+ERROR 2018-10-26 21:22:55,666 basehttp 124 "GET /oauth/qq/user/?code=E701F2671B3CBAF856000D741797A02D HTTP/1.1" 500 18337
+INFO 2018-10-26 21:27:12,230 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-26 21:27:23,500 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/views.py", line 55, in get
+    qq_user = OAuthQQUser.objects.get(openid=openid)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/views.py", line 58, in get
+    token = oauth.generate_save_user_token(openid)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/utils.py", line 90, in generate_save_user_token
+    serializer = Serializer(dev.SECRET_KEY, expires_in=constants.SAVE_QQ_USER_TOKEN_EXPIRES)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 118, in __init__
+    super(BaseSerializer, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'expires_in'
+ERROR 2018-10-26 21:27:23,550 basehttp 124 "GET /oauth/qq/user/?code=9049294F1A697042F44A2F3E08BF008B HTTP/1.1" 500 18335
+INFO 2018-10-26 21:40:15,816 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-26 21:40:27,282 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/views.py", line 55, in get
+    qq_user = OAuthQQUser.objects.get(openid=openid)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/views.py", line 58, in get
+    token = oauth.generate_save_user_token(openid)
+  File "/Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/meiduo/apps/oauth/utils.py", line 90, in generate_save_user_token
+    serializer = Serializer(dev.SECRET_KEY, expires_in=constants.SAVE_QQ_USER_TOKEN_EXPIRES)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 118, in __init__
+    super(BaseSerializer, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'expires_in'
+ERROR 2018-10-26 21:40:27,331 basehttp 124 "GET /oauth/qq/user/?code=B709D2EABD3BF0A059E700F410D5ADA6 HTTP/1.1" 500 18335
+INFO 2018-10-27 10:50:22,717 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-27 10:50:34,352 basehttp 124 "GET /oauth/qq/user/?code=AE687D6066B797A016D76067580B9D5E HTTP/1.1" 200 190
+INFO 2018-10-27 11:01:12,669 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-27 11:01:21,053 basehttp 124 "GET /oauth/qq/user/?code=CAE6C8CFD7AFDF20AE97B9EBD1FB9D8C HTTP/1.1" 200 190
+INFO 2018-10-28 09:05:09,088 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:05:10,466 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:05:15,993 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:07:31,812 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:08:12,138 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:08:57,119 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:09:17,318 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:10:05,961 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:10:13,770 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 09:10:32,787 basehttp 124 "GET /oauth/qq/user/?code=86DA248C6BF6DA48875E00065D3B737B HTTP/1.1" 200 190
+INFO 2018-10-28 09:10:42,558 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+INFO 2018-10-28 09:10:43,583 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-28 09:10:58,317 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 09:10:58,331 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1119bacc0>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:10:58,331 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 09:25:28,144 basehttp 124 "GET /oauth/qq/user/?code=8EB481C19E531EC91441F97CF9915D5D HTTP/1.1" 200 190
+INFO 2018-10-28 09:25:34,507 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+INFO 2018-10-28 09:25:35,367 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-28 09:25:46,849 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 09:25:46,857 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1119bfd30>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:25:46,858 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 09:33:25,606 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111cc6208>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:33:25,611 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 09:33:36,962 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111eb2ac8>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:33:36,966 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 09:33:45,712 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111f40588>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:33:45,715 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 09:37:09,296 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111f40550>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:37:09,303 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 09:37:49,688 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 09:37:55,754 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111f570b8>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:37:55,760 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 09:41:23,793 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1115c9f60>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:41:23,794 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 09:50:42,188 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 09:50:42,213 exceptions 26 [<oauth.views.QQAuthUserView object at 0x110d912e8>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 09:50:42,214 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:00:40,480 exceptions 26 [<oauth.views.QQAuthUserView object at 0x110bd2e80>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:00:40,481 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 10:03:19,765 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 10:03:19,802 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111645320>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:03:19,803 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:11:10,042 exceptions 26 [<oauth.views.QQAuthUserView object at 0x11153db00>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:11:10,043 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:11:33,456 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1112df710>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:11:33,457 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:11:52,038 exceptions 26 [<oauth.views.QQAuthUserView object at 0x10fe20e48>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:11:52,039 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 10:42:49,241 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 10:42:49,272 exceptions 26 [<oauth.views.QQAuthUserView object at 0x10fd41358>] The field 'access_token' was declared on serializer OAuthQQUserSerializer, but has not been included in the 'fields' option.
+ERROR 2018-10-28 10:42:49,272 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:43:13,050 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1115a9748>] The field 'sms_code' was declared on serializer OAuthQQUserSerializer, but has not been included in the 'fields' option.
+ERROR 2018-10-28 10:43:13,051 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:43:45,619 exceptions 26 [<oauth.views.QQAuthUserView object at 0x10fe675f8>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:43:45,620 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:46:29,434 exceptions 26 [<oauth.views.QQAuthUserView object at 0x110aed6d8>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'access_token' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:46:29,435 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:46:55,138 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111409fd0>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 10:46:55,139 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:48:49,023 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1114861d0>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 10:48:49,024 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:52:14,583 exceptions 26 [<oauth.views.QQAuthUserView object at 0x110ea93c8>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 10:52:14,584 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 10:55:06,703 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 10:55:10,710 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111d182b0>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 10:55:10,712 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:57:06,422 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1114b5be0>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 10:57:06,423 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 10:58:35,373 exceptions 26 [<oauth.views.QQAuthUserView object at 0x11149eda0>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 10:58:35,374 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 11:00:21,183 exceptions 26 [<oauth.views.QQAuthUserView object at 0x11074bba8>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 11:00:21,185 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 11:00:47,335 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111cd6ef0>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 11:00:47,340 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 11:01:23,116 exceptions 26 [<oauth.views.QQAuthUserView object at 0x11149e320>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 11:01:23,117 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 11:01:23,235 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111739518>] (1062, "Duplicate entry '13590299759' for key 'mobile'")
+ERROR 2018-10-28 11:01:23,236 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 11:02:53,249 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1113591d0>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 11:02:53,249 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 11:07:40,309 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 11:07:40,408 exceptions 26 [<oauth.views.QQAuthUserView object at 0x111dc2cc0>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 11:07:40,412 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 11:13:49,896 exceptions 26 [<oauth.views.QQAuthUserView object at 0x10f9a7940>] Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the OAuthQQUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/Users/huangjianhao/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'sms_code' is an invalid keyword argument for this function
+
+ERROR 2018-10-28 11:13:49,897 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 11:15:56,955 exceptions 26 [<oauth.views.QQAuthUserView object at 0x1116e7f28>] `create()` must be implemented.
+ERROR 2018-10-28 11:15:56,956 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+WARNING 2018-10-28 11:17:02,246 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+INFO 2018-10-28 11:18:44,368 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 11:18:44,391 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+WARNING 2018-10-28 11:20:16,104 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+WARNING 2018-10-28 11:20:31,998 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+WARNING 2018-10-28 11:20:33,189 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+WARNING 2018-10-28 11:20:53,648 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+WARNING 2018-10-28 11:24:06,211 base 152 Not Found: /
+WARNING 2018-10-28 11:24:06,212 basehttp 124 "GET / HTTP/1.1" 404 2916
+INFO 2018-10-28 11:25:57,444 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-28 11:26:13,718 qq_sdk 60 code=None msg=None
+ERROR 2018-10-28 11:26:13,719 basehttp 124 "GET /oauth/qq/user/?code=91927A192FD555F97CBC827270C35244 HTTP/1.1" 503 28
+INFO 2018-10-28 11:26:25,166 basehttp 124 "GET /oauth/qq/user/?code=4F8E9438DB02852FC0C30F7792E749F7 HTTP/1.1" 200 190
+INFO 2018-10-28 11:26:30,237 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+ERROR 2018-10-28 11:27:04,680 exceptions 26 [<oauth.views.QQAuthUserView object at 0x11181acc0>] [Errno 60] Operation timed out
+ERROR 2018-10-28 11:27:04,682 basehttp 124 "GET /oauth/qq/user/?code=91927A192FD555F97CBC827270C35244 HTTP/1.1" 507 35
+INFO 2018-10-28 11:29:33,204 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-28 11:29:50,226 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 11:29:50,255 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 46
+INFO 2018-10-28 14:07:25,449 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 14:07:40,075 basehttp 124 "GET /oauth/qq/user/?code=785D0AFCF0AAA6616C0A9A93297F4BDF HTTP/1.1" 200 190
+INFO 2018-10-28 14:07:47,861 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+INFO 2018-10-28 14:07:48,343 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-28 14:08:11,836 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 14:08:45,599 exceptions 26 [<oauth.views.QQAuthUserView object at 0x113052160>] 'password'
+ERROR 2018-10-28 14:08:45,601 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 14:09:50,360 exceptions 26 [<oauth.views.QQAuthUserView object at 0x113066470>] 'password'
+ERROR 2018-10-28 14:09:50,367 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+ERROR 2018-10-28 14:12:11,194 exceptions 26 [<oauth.views.QQAuthUserView object at 0x113050550>] 'password'
+ERROR 2018-10-28 14:12:11,201 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 507 35
+INFO 2018-10-28 14:28:51,719 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 14:33:08,725 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+WARNING 2018-10-28 14:33:21,384 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 49
+INFO 2018-10-28 14:40:06,079 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 14:40:34,720 basehttp 124 "GET /oauth/qq/user/?code=12715453472A4623F2736FE65A3F91D9 HTTP/1.1" 200 190
+INFO 2018-10-28 14:40:44,274 basehttp 124 "GET /sms_code/13590299759/ HTTP/1.1" 200 16
+INFO 2018-10-28 14:40:44,278 tasks 29 发送验证码短信[正常][ mobile: 13590299759 ]
+INFO 2018-10-28 14:40:57,597 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+INFO 2018-10-28 14:40:57,710 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 47
+INFO 2018-10-28 15:57:09,595 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:57:09,661 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+WARNING 2018-10-28 15:57:33,823 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+WARNING 2018-10-28 15:57:35,749 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+INFO 2018-10-28 15:57:40,951 basehttp 124 "GET /oauth/qq/authorization/?next=/user_center_info.html HTTP/1.1" 200 216
+INFO 2018-10-28 15:57:59,788 basehttp 124 "GET /oauth/qq/user/?code=C9EE45A02E9C6E50BA14FCCB734CDCAB HTTP/1.1" 200 47
+INFO 2018-10-28 15:57:59,839 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:57:59,887 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+INFO 2018-10-28 16:07:53,138 basehttp 124 "GET /oauth/qq/authorization/?next=/user_center_info.html HTTP/1.1" 200 216
+INFO 2018-10-28 16:08:26,532 basehttp 124 "GET /oauth/qq/user/?code=7B60EDFE847BFB60838DE0A52EAF8EC5 HTTP/1.1" 200 47
+INFO 2018-10-28 16:08:26,578 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-28 16:08:26,584 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+INFO 2018-10-28 16:08:49,662 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-28 16:08:49,709 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-28 16:08:49,766 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+INFO 2018-10-28 16:08:49,771 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-28 16:08:49,778 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 16:08:49,780 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3146
+WARNING 2018-10-28 16:09:04,065 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 16:09:04,066 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3146
+WARNING 2018-10-28 16:09:07,270 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+WARNING 2018-10-28 16:09:08,998 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+WARNING 2018-10-28 16:09:16,481 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+WARNING 2018-10-28 16:09:18,301 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+WARNING 2018-10-28 16:09:49,903 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+WARNING 2018-10-28 16:14:25,589 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+INFO 2018-10-28 16:14:36,587 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-10-28 16:14:36,642 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-28 16:14:36,651 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 16:14:36,651 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3146
+INFO 2018-10-28 16:14:49,741 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-28 16:14:49,749 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 16:14:49,749 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3146
+INFO 2018-10-28 16:14:53,447 basehttp 124 "GET /user/ HTTP/1.1" 200 84
+WARNING 2018-10-28 16:14:53,455 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 16:14:53,456 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3146
