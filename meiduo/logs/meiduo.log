@@ -885,3 +885,88 @@ WARNING 2018-10-29 20:11:59,858 basehttp 124 "GET /browse_histories/ HTTP/1.1" 4
 INFO 2018-10-29 20:12:11,535 basehttp 124 "PUT /emails/ HTTP/1.1" 200 39
 INFO 2018-10-29 20:12:57,653 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0MDgxNTEzMSwiZXhwIjoxNTQwOTAxNTMxfQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImVyaWNfamlhbmhhb0AxNjMuY29tIn0.fWokFsbsSUqq0ecoM_l7HMYa5NkvkI7bq1vNEhG8TyU HTTP/1.1" 200 16
 INFO 2018-10-29 20:12:57,702 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0MDgxNTA1OCwiZXhwIjoxNTQwOTAxNDU4fQ.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImVyaWNfamlhbmhhb0AxNjMuY29tIn0.fROgmnzmC5kGuSn46HjtSKTlggxQE__1Q1mUYu4HnlY HTTP/1.1" 200 16
+INFO 2018-10-29 21:42:24,559 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-29 21:42:40,056 basehttp 124 "GET /oauth/qq/user/?code=4C29D03197B93106053C875EA800B7A9 HTTP/1.1" 200 47
+INFO 2018-10-31 16:52:42,425 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-10-31 16:52:42,481 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+INFO 2018-10-31 16:52:54,641 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-31 16:52:54,695 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 236
+INFO 2018-10-31 16:52:54,766 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-10-31 16:52:54,773 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-31 16:52:54,782 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 16:52:54,783 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4644
+WARNING 2018-10-31 16:54:14,774 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 16:54:14,775 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4644
+INFO 2018-10-31 16:55:30,776 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-31 16:55:30,790 base 152 Not Found: /addresses/
+WARNING 2018-10-31 16:55:30,794 basehttp 124 "GET /addresses/ HTTP/1.1" 404 4623
+INFO 2018-10-31 16:55:30,794 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-10-31 16:55:33,303 base 152 Not Found: /addresses/
+INFO 2018-10-31 16:55:33,303 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-10-31 16:55:33,304 basehttp 124 "GET /addresses/ HTTP/1.1" 404 4623
+ERROR 2018-10-31 16:55:41,111 exceptions 26 [<areas.views.AreasViewSet object at 0x1117f8dd8>] The field 'subs' was declared on serializer SubAreaSerializer, but has not been included in the 'fields' option.
+ERROR 2018-10-31 16:55:41,112 basehttp 124 "GET /areas/110000/ HTTP/1.1" 507 35
+ERROR 2018-10-31 19:31:08,076 exceptions 26 [<areas.views.AreasViewSet object at 0x1113f67f0>] The field 'subs' was declared on serializer SubAreaSerializer, but has not been included in the 'fields' option.
+ERROR 2018-10-31 19:31:08,077 basehttp 124 "GET /areas/110000/ HTTP/1.1" 507 35
+INFO 2018-10-31 19:31:27,961 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-31 19:31:27,972 base 152 Not Found: /addresses/
+WARNING 2018-10-31 19:31:27,973 basehttp 124 "GET /addresses/ HTTP/1.1" 404 4623
+INFO 2018-10-31 19:31:27,984 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-10-31 19:31:38,617 exceptions 26 [<areas.views.AreasViewSet object at 0x110f9bd68>] The field 'subs' was declared on serializer SubAreaSerializer, but has not been included in the 'fields' option.
+ERROR 2018-10-31 19:31:38,618 basehttp 124 "GET /areas/110000/ HTTP/1.1" 507 35
+ERROR 2018-10-31 19:50:21,765 exceptions 26 [<areas.views.AreasViewSet object at 0x110fc2e10>] The field 'subs' was declared on serializer SubAreaSerializer, but has not been included in the 'fields' option.
+ERROR 2018-10-31 19:50:21,766 basehttp 124 "GET /areas/130000/ HTTP/1.1" 507 35
+ERROR 2018-10-31 19:50:51,478 exceptions 26 [<areas.views.AreasViewSet object at 0x110fcf9e8>] The field 'subs' was declared on serializer SubAreaSerializer, but has not been included in the 'fields' option.
+ERROR 2018-10-31 19:50:51,479 basehttp 124 "GET /areas/110000/ HTTP/1.1" 507 35
+INFO 2018-10-31 19:59:27,498 basehttp 124 "GET /areas/220000/ HTTP/1.1" 200 353
+INFO 2018-10-31 19:59:34,901 basehttp 124 "GET /areas/220400/ HTTP/1.1" 200 173
+INFO 2018-11-01 15:19:43,918 basehttp 124 "GET /areas/440000/ HTTP/1.1" 200 734
+INFO 2018-11-01 15:19:47,974 basehttp 124 "GET /areas/440300/ HTTP/1.1" 200 239
+INFO 2018-11-01 15:19:59,299 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-01 15:19:59,306 base 152 Not Found: /addresses/
+WARNING 2018-11-01 15:19:59,306 basehttp 124 "POST /addresses/ HTTP/1.1" 404 4624
+WARNING 2018-11-01 15:20:03,262 base 152 Not Found: /addresses/
+WARNING 2018-11-01 15:20:03,263 basehttp 124 "POST /addresses/ HTTP/1.1" 404 4624
+ERROR 2018-11-01 15:23:49,140 exceptions 26 [<users.views.AddressViewSet object at 0x11097d828>] (1048, "Column 'user_id' cannot be null")
+ERROR 2018-11-01 15:23:49,141 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-01 15:26:08,744 basehttp 124 "GET /areas/440000/ HTTP/1.1" 200 734
+INFO 2018-11-01 15:26:11,604 basehttp 124 "GET /areas/440300/ HTTP/1.1" 200 239
+ERROR 2018-11-01 15:26:35,691 exceptions 26 [<users.views.AddressViewSet object at 0x1117ccf60>] (1048, "Column 'user_id' cannot be null")
+ERROR 2018-11-01 15:26:35,691 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+ERROR 2018-11-01 15:28:30,618 exceptions 26 [<users.views.AddressViewSet object at 0x1117ccdd8>] (1048, "Column 'user_id' cannot be null")
+ERROR 2018-11-01 15:28:30,618 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-01 15:32:27,275 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-01 15:32:27,388 basehttp 124 "POST /addresses/ HTTP/1.1" 201 246
+INFO 2018-11-01 15:32:33,648 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-11-01 15:32:33,649 exceptions 26 [<users.views.AddressViewSet object at 0x1118f4c88>] Cannot resolve keyword 'is_delete' into field. Choices are: city, city_id, create_time, district, district_id, email, id, is_deleted, mobile, place, province, province_id, receiver, tel, title, update_time, user, user_id, users
+ERROR 2018-11-01 15:32:33,649 basehttp 124 "GET /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-01 15:34:52,766 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-11-01 15:34:52,773 exceptions 26 [<users.views.AddressViewSet object at 0x111920f98>] Cannot resolve keyword 'is_delete' into field. Choices are: city, city_id, create_time, district, district_id, email, id, is_deleted, mobile, place, province, province_id, receiver, tel, title, update_time, user, user_id, users
+ERROR 2018-11-01 15:34:52,774 basehttp 124 "GET /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-01 15:36:14,256 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-01 15:36:14,265 basehttp 124 "GET /addresses/ HTTP/1.1" 200 310
+INFO 2018-11-01 15:36:30,337 basehttp 124 "GET /areas/440000/ HTTP/1.1" 200 734
+INFO 2018-11-01 15:36:30,338 basehttp 124 "GET /areas/440300/ HTTP/1.1" 200 239
+INFO 2018-11-01 15:36:34,397 basehttp 124 "OPTIONS /addresses/1/ HTTP/1.1" 200 0
+INFO 2018-11-01 15:36:34,517 basehttp 124 "PUT /addresses/1/ HTTP/1.1" 200 252
+INFO 2018-11-01 15:36:46,337 basehttp 124 "PUT /addresses/1/ HTTP/1.1" 200 268
+INFO 2018-11-01 15:36:50,553 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-01 15:36:50,568 basehttp 124 "GET /addresses/ HTTP/1.1" 200 332
+INFO 2018-11-01 15:37:01,815 basehttp 124 "OPTIONS /addresses/1/status/ HTTP/1.1" 200 0
+INFO 2018-11-01 15:37:01,864 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 200 16
+INFO 2018-11-01 15:37:03,994 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-01 15:37:04,008 basehttp 124 "GET /addresses/ HTTP/1.1" 200 329
+INFO 2018-11-01 15:37:23,779 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-11-01 15:37:26,912 basehttp 124 "GET /areas/450000/ HTTP/1.1" 200 518
+INFO 2018-11-01 15:37:29,135 basehttp 124 "GET /areas/440000/ HTTP/1.1" 200 734
+INFO 2018-11-01 15:37:31,805 basehttp 124 "GET /areas/441700/ HTTP/1.1" 200 173
+INFO 2018-11-01 15:37:38,414 basehttp 124 "GET /areas/440300/ HTTP/1.1" 200 239
+INFO 2018-11-01 15:37:49,195 basehttp 124 "POST /addresses/ HTTP/1.1" 201 246
+INFO 2018-11-01 15:37:51,184 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-01 15:37:51,202 basehttp 124 "GET /addresses/ HTTP/1.1" 200 576
+INFO 2018-11-01 15:37:55,876 basehttp 124 "OPTIONS /addresses/2/ HTTP/1.1" 200 0
+INFO 2018-11-01 15:37:55,949 basehttp 124 "DELETE /addresses/2/ HTTP/1.1" 204 0
+INFO 2018-11-01 15:41:19,606 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-01 15:41:19,609 basehttp 124 "GET /addresses/ HTTP/1.1" 200 329
+INFO 2018-11-01 15:41:28,553 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-01 15:41:28,567 basehttp 124 "GET /addresses/ HTTP/1.1" 200 329
