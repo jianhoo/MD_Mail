@@ -50,6 +50,10 @@ INSTALLED_APPS = [
     'rest_framework',
     # 跨域CORS
     'corsheaders',
+    # 富文本编辑器
+    'ckeditor',
+    # 富文本编辑器上传图片模块
+    'ckeditor_uploader',
     'users.apps.UsersConfig',
     'verifications.apps.VerificationsConfig',
     'oauth.apps.OauthConfig',
@@ -249,7 +253,6 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 
 # QQ登录参数
-# QQ登录参数
 QQ_CLIENT_ID = '101474184'
 QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'
 QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html'
@@ -265,3 +268,21 @@ EMAIL_HOST_USER = 'eric_jianhao@163.com'
 EMAIL_HOST_PASSWORD = 'astiai333822'
 # 收件人看到的发件人
 EMAIL_FROM = '美多商城<eric_jianhao@163.com>'
+
+
+# django文件存储
+DEFAULT_FILE_STORAGE = 'utils.fastdfs.fdfs_storage.FastDFSStorage'
+
+# FastDFS
+FDFS_URL = 'http://image.meiduo.site:8888/'
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
+
+# 富文本编辑器ckeditor配置
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # 工具条功能
+        'height': 300,  # 编辑器高度
+        # 'width': 300,  # 编辑器宽度
+    },
+}
+CKEDITOR_UPLOAD_PATH = ''  # 上传图片保存路径，使用了FastDFS，所以此处设为''
