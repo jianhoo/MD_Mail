@@ -1025,3 +1025,186 @@ INFO 2018-11-02 20:05:26,837 basehttp 124 "GET /admin/ HTTP/1.1" 200 6785
 INFO 2018-11-02 20:05:27,158 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
 WARNING 2018-11-02 20:05:27,337 base 152 Not Found: /favicon.ico
 WARNING 2018-11-02 20:05:27,342 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6847
+WARNING 2018-11-02 20:50:12,180 base 152 Not Found: /index.html
+WARNING 2018-11-02 20:50:12,182 basehttp 124 "GET /index.html HTTP/1.1" 404 6838
+WARNING 2018-11-02 20:50:12,329 base 152 Not Found: /favicon.ico
+WARNING 2018-11-02 20:50:12,330 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6841
+WARNING 2018-11-02 20:52:31,488 base 152 Not Found: /index.html
+WARNING 2018-11-02 20:52:31,489 basehttp 124 "GET /index.html HTTP/1.1" 404 6838
+INFO 2018-11-02 20:52:43,801 basehttp 124 "GET / HTTP/1.1" 200 5183
+INFO 2018-11-02 20:52:43,822 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-11-02 20:52:43,824 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-11-02 20:52:43,826 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-11-02 20:52:43,830 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-11-02 20:52:43,830 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-11-02 20:52:43,833 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-11-02 20:52:43,834 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-11-02 20:52:43,834 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-11-02 20:52:43,835 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-11-02 20:52:43,836 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-11-02 20:52:43,891 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2018-11-02 20:58:06,404 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 20:58:06,418 base 152 Not Found: /categories/115/skus/
+WARNING 2018-11-02 20:58:06,416 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 20:58:06,424 base 152 Not Found: /cart/
+WARNING 2018-11-02 20:58:06,425 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 404 6923
+WARNING 2018-11-02 20:58:06,425 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 6859
+WARNING 2018-11-02 20:58:06,426 basehttp 124 "GET /cart/ HTTP/1.1" 404 6829
+INFO 2018-11-03 09:22:17,418 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-03 09:22:17,432 base 152 Not Found: /categories/115/
+WARNING 2018-11-03 09:22:17,438 base 152 Not Found: /cart/
+WARNING 2018-11-03 09:22:17,439 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 09:22:17,440 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 09:22:17,462 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2018-11-03 09:23:24,862 base 152 Not Found: /categories/115/
+WARNING 2018-11-03 09:23:24,869 base 152 Not Found: /cart/
+WARNING 2018-11-03 09:23:24,869 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 09:23:24,870 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 09:23:24,879 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2018-11-03 09:23:36,242 base 152 Not Found: /categories/115/
+WARNING 2018-11-03 09:23:36,251 base 152 Not Found: /cart/
+WARNING 2018-11-03 09:23:36,251 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 09:23:36,252 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 09:23:36,263 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2018-11-03 09:27:29,173 base 152 Not Found: /categories/115/
+WARNING 2018-11-03 09:27:29,180 base 152 Not Found: /cart/
+WARNING 2018-11-03 09:27:29,181 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 09:27:29,183 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 09:27:29,192 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-11-03 09:27:55,561 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1369
+INFO 2018-11-03 09:27:57,084 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 1033
+INFO 2018-11-03 09:27:58,119 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-11-03 09:27:59,246 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-03 09:28:03,273 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-11-03 09:28:04,202 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-03 09:28:05,267 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-11-03 09:28:05,638 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-03 09:28:06,406 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1270
+INFO 2018-11-03 09:28:08,635 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-03 09:28:09,372 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1270
+INFO 2018-11-03 09:28:10,426 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-03 09:28:10,732 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-11-03 09:28:11,261 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-03 09:28:11,581 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1270
+INFO 2018-11-03 09:40:15,016 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8575
+INFO 2018-11-03 09:40:15,040 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:40:17,682 basehttp 124 "GET /admin/ HTTP/1.1" 200 6785
+INFO 2018-11-03 09:40:19,327 basehttp 124 "GET /admin/goods/goodscategory/ HTTP/1.1" 200 27851
+INFO 2018-11-03 09:40:19,346 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:40:23,131 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 15782
+INFO 2018-11-03 09:40:23,150 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:40:27,739 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28047
+INFO 2018-11-03 09:40:27,759 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:40:32,373 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 09:40:32,500 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28279
+INFO 2018-11-03 09:40:32,519 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:47:15,177 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 09:47:15,331 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 15968
+INFO 2018-11-03 09:47:15,350 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:14:41,270 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28059
+INFO 2018-11-03 10:14:43,597 basehttp 124 "GET /admin/ HTTP/1.1" 200 8518
+INFO 2018-11-03 10:14:46,880 basehttp 124 "GET /admin/goods/goodscategory/ HTTP/1.1" 200 27851
+INFO 2018-11-03 10:14:46,898 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:14:49,785 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 15786
+INFO 2018-11-03 10:14:49,806 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:14:51,934 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28059
+INFO 2018-11-03 10:14:51,954 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:14:53,917 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 10:14:54,035 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 15968
+INFO 2018-11-03 10:14:54,053 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:40:57,517 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-03 10:40:57,528 base 152 Not Found: /categories/115/
+WARNING 2018-11-03 10:40:57,529 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 10:40:57,536 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:40:57,537 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 10:40:57,547 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2018-11-03 10:41:32,304 base 152 Not Found: /categories/116/
+WARNING 2018-11-03 10:41:32,311 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:41:32,312 basehttp 124 "GET /categories/116/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 10:41:32,313 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 10:41:32,318 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+WARNING 2018-11-03 10:41:35,924 base 152 Not Found: /categories/117/
+WARNING 2018-11-03 10:41:35,924 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:41:35,925 basehttp 124 "GET /categories/117/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 10:41:35,926 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 10:41:35,931 basehttp 124 "GET /categories/117/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+WARNING 2018-11-03 10:41:39,107 base 152 Not Found: /categories/163/
+WARNING 2018-11-03 10:41:39,114 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:41:39,115 basehttp 124 "GET /categories/163/ HTTP/1.1" 404 7052
+WARNING 2018-11-03 10:41:39,115 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 10:41:39,120 basehttp 124 "GET /categories/163/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+WARNING 2018-11-03 10:41:41,948 base 152 Not Found: /categories/115/
+WARNING 2018-11-03 10:41:41,955 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:41:41,955 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+WARNING 2018-11-03 10:41:41,956 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7052
+INFO 2018-11-03 10:41:41,964 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2018-11-03 10:41:45,307 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:41:45,307 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+WARNING 2018-11-03 10:42:00,406 base 152 Not Found: /categories/116/
+INFO 2018-11-03 10:42:00,408 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-03 10:42:00,409 basehttp 124 "GET /categories/116/ HTTP/1.1" 404 7052
+INFO 2018-11-03 10:42:00,412 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+WARNING 2018-11-03 10:42:00,496 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:42:00,496 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+WARNING 2018-11-03 10:42:00,823 base 152 Not Found: /cart/
+WARNING 2018-11-03 10:42:00,824 basehttp 124 "GET /cart/ HTTP/1.1" 404 7022
+INFO 2018-11-03 11:06:55,416 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28059
+INFO 2018-11-03 11:06:55,443 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 11:06:59,465 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:06:59,578 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 15966
+INFO 2018-11-03 11:06:59,598 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 11:23:21,092 basehttp 124 "GET / HTTP/1.1" 200 5183
+WARNING 2018-11-03 11:23:25,244 basehttp 124 "GET /addresses/ HTTP/1.1" 401 5089
+ERROR 2018-11-03 11:23:37,748 exceptions 26 [<users.views.index object at 0x111c03e80>] get() takes 1 positional argument but 2 were given
+ERROR 2018-11-03 11:23:37,758 basehttp 124 "GET /index/ HTTP/1.1" 507 5189
+INFO 2018-11-03 11:24:53,160 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-11-03 11:26:13,162 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-11-03 11:26:47,116 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-11-03 11:27:12,281 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28056
+INFO 2018-11-03 11:27:12,921 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28056
+INFO 2018-11-03 11:27:13,023 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 11:27:18,414 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:21,184 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28275
+INFO 2018-11-03 11:27:21,307 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:23,916 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:24,480 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28447
+INFO 2018-11-03 11:27:25,220 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:25,686 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:26,389 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:26,901 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:26,996 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:27,418 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:28,952 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:29,520 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:29,686 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:29,692 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:30,874 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:31,083 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:31,406 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 16310
+INFO 2018-11-03 11:27:31,468 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:35,435 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 17018
+INFO 2018-11-03 11:27:35,480 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 11:27:39,531 basehttp 124 "GET /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 200 28056
+INFO 2018-11-03 11:27:39,551 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 11:27:40,824 basehttp 124 "POST /admin/goods/goodscategory/1/change/?_changelist_filters=p%3D5 HTTP/1.1" 302 0
+INFO 2018-11-03 11:27:40,967 basehttp 124 "GET /admin/goods/goodscategory/?p=5 HTTP/1.1" 200 15966
+INFO 2018-11-03 11:27:40,986 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 11:28:19,444 basehttp 124 "GET /mobiles/13590299759/count/ HTTP/1.1" 200 41
+INFO 2018-11-04 14:50:11,032 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 200 8248
+INFO 2018-11-04 14:50:11,088 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-11-04 14:50:11,088 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-11-04 14:50:11,089 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-11-04 14:50:11,089 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-11-04 14:50:11,091 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-11-04 14:50:11,097 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-11-04 14:50:11,100 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-11-04 14:50:11,100 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-11-04 14:50:11,101 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-11-04 14:50:11,101 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-11-04 14:50:11,157 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-11-04 14:50:11,183 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1739
+INFO 2018-11-04 14:52:01,948 basehttp 124 "GET /skus/search/?text=wifi&page=1&page_size=6 HTTP/1.1" 200 2667
+INFO 2018-11-04 14:52:08,954 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 2681
+INFO 2018-11-04 14:52:10,432 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=2&page_size=6 HTTP/1.1" 200 971
+INFO 2018-11-04 14:52:13,609 basehttp 124 "GET /skus/search/?text=%E8%8B%B9%E6%9E%9C&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-11-04 14:52:16,609 basehttp 124 "GET /skus/search/?text=iphone&page=1&page_size=6 HTTP/1.1" 200 2403

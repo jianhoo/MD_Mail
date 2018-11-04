@@ -3,6 +3,14 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 
+
+class SKUAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name']
+
+    def save_model(self, request, obj, form, change):
+        super().save_model(request, obj, form, change)
+
+
 admin.site.register(models.GoodsCategory)
 admin.site.register(models.GoodsChannel)
 admin.site.register(models.Goods)

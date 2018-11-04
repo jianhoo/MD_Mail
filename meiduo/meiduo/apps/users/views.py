@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ViewSet, ModelViewSet
 
+from contents.crons import generate_static_index_html
 from users import serializers
 from users.models import User
 
@@ -47,7 +48,7 @@ class MobileCountView(APIView):
             'mobile': mobile,
             'count': count
         }
-
+        # generate_static_index_html()
         return Response(data)
 
 
@@ -139,3 +140,4 @@ class AddressViewSet(ModelViewSet):
         user.default_address_id = pk
         user.save()
         return Response({'message': 'OK'})
+
