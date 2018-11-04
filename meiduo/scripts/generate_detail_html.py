@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-#在当前的环境中查找python解释器的路径
-#!/home/python/.virtualenvs/meiduo/bin/python
-#指定python解释器
+# 在当前的环境中查找python解释器的路径
+# !/home/python/.virtualenvs/meiduo/bin/python
+# 指定python解释器
 
 # 指定当前项目的运行环境
 import sys

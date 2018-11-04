@@ -22,7 +22,6 @@ import sys
 os.path.join(BASE_DIR, 'apps')
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -171,6 +170,13 @@ CACHES = {
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
+    },
+    "history": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/3",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
     }
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
@@ -277,7 +283,6 @@ EMAIL_HOST_PASSWORD = 'astiai333822'
 # 收件人看到的发件人
 EMAIL_FROM = '美多商城<eric_jianhao@163.com>'
 
-
 # django文件存储
 DEFAULT_FILE_STORAGE = 'utils.fastdfs.fdfs_storage.FastDFSStorage'
 
@@ -301,7 +306,8 @@ GENERATED_STATIC_HTML_FILES_DIR = os.path.join(os.path.dirname(os.path.dirname(B
 # 定时任务
 CRONJOBS = [
     # 每1分钟执行一次生成主页静态文件
-    ('*/1 * * * *', 'contents.crons.generate_static_index_html', '>> /Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/logs/crontab.log')
+    ('*/1 * * * *', 'contents.crons.generate_static_index_html',
+     '>> /Users/huangjianhao/Downloads/PythonProject/meiduo_mall/meiduo/logs/crontab.log')
 ]
 # 解决crontab中文问题
 CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
