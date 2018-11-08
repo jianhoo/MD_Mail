@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
     # 跨域CORS
     'corsheaders',
@@ -58,12 +59,16 @@ INSTALLED_APPS = [
     'django_crontab',
     # 搜索引擎
     'haystack',
+
     'users.apps.UsersConfig',
     'verifications.apps.VerificationsConfig',
     'oauth.apps.OauthConfig',
     'areas.apps.AreasConfig',
     'goods.apps.GoodsConfig',
     'contents.apps.ContentsConfig',
+    'carts.apps.CartsConfig',
+    'orders.apps.OrdersConfig',
+    'payments.apps.PaymentsConfig',
 ]
 
 MIDDLEWARE = [
@@ -93,7 +98,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-    },
+    }
 ]
 
 WSGI_APPLICATION = 'meiduo.wsgi.application'
@@ -174,6 +179,13 @@ CACHES = {
     "history": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://127.0.0.1:6379/3",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+    "cart": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/4",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -325,3 +337,12 @@ HAYSTACK_CONNECTIONS = {
 
 # 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+# 支付宝配置
+ALIPAY_APPID = '2016092000558093'  # 商家账号
+ALIPAY_GATE = 'https://openapi.alipaydev.com/gateway.do?'
+ALIPAY_DEBUG = True  # 如果是真实支付，改成False
+ALIPAY_NOTIFY_URL = 'http://www.meiduo.site:8080/pay_success.html'
+ALIPAY_SIGN_TYPE = 'RSA2'
+ALIPAY_PRIVATE_KEY_PATH = os.path.join(BASE_DIR, 'apps/payments/alipay/app_private_key.pem')
+ALIPAY_PUBLIC_KEY_PATH = os.path.join(BASE_DIR, 'apps/payments/alipay/alipay_public_key.pem')

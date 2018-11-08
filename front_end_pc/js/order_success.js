@@ -45,7 +45,7 @@ var vm = new Vue({
                 location.href = '/index.html';
             } else {
                 // 发起支付
-                axios.get(this.host + '/orders/' + this.order_id + '/payment/', {
+                axios.get(this.host + '/payment/' + this.order_id , {
                     headers: {
                         'Authorization': 'JWT ' + this.token
                     },

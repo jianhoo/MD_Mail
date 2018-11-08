@@ -23,5 +23,8 @@ urlpatterns = [
     url(r'^oauth/', include('oauth.urls')),
     url(r'^', include('areas.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-    url('^', include('goods.urls'))
+    url('^', include('goods.urls')),
+    url('^', include('carts.urls')),
+    url('^', include('orders.urls')),
+    url('^', include('payments.urls')),
 ]

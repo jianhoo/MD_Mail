@@ -1,0 +1,2 @@
+CART_COOKIE_EXPIRES = 365 * 24 * 69 * 60
+
